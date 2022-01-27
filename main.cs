@@ -8,16 +8,19 @@ namespace Journal
 	{
 		static void Main(string[] args)
 		{
+			// Running the Program...
 			Program.Run();	
 		}
 	}
 
 	public class Program
 	{
+		//Variable Declaration
 		static List<string> DataArr = new List<string>();
 		static string data;
 		static bool Flag = true;
 
+		// Method to handle recording...
 		public static void Record()
 		{
 			while (data != "stop")
@@ -31,6 +34,7 @@ namespace Journal
 			SaveData(DataArr);
 		}
 
+		// Method to Run the whole program...
 		public static void Run()
 		{
 			string input;
@@ -43,6 +47,7 @@ namespace Journal
 			} while (Flag);
 		}
 
+		// Method to Save All data to a file...
 		public static void SaveData(List<string> arr)
 		{
 			DateTime curr = DateTime.Now;
